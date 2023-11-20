@@ -66,7 +66,7 @@ const TeamList = () => {
 
   return (
     <Container>
-      <PWrapper>
+      <Wrapper>
       {
         teams && teams.length > 0
         ? 
