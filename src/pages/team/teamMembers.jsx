@@ -18,7 +18,7 @@ const Container = styled(Box)`
   ${mobile({  })}
 `;
 
-const ProductWrapper = styled(Box)`
+const Wrapper = styled(Box)`
   width: 100vw;
   height: auto;
   margin: auto;
@@ -59,7 +59,7 @@ const TeamMember = () => {
 
   return (
     <Container>
-      <ProductWrapper>
+      <Wrapper>
       {
         members && members.length > 0
         ? 
@@ -76,7 +76,7 @@ const TeamMember = () => {
           </Grid> 
         : null
       }     
-      </ProductWrapper>
+      </Wrapper>
     </Container>
   )
 }
