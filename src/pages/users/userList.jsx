@@ -40,7 +40,7 @@ const PaginationBarWrapper = styled(Box)`
   ${mobile({ })}
 `;
 
-const ProductWrapper = styled(Box)`
+const UserWrapper = styled(Box)`
   width: 100vw;
   height: auto;
   margin: auto;
@@ -184,7 +184,7 @@ const UserList = () => {
           : null
         }
       </FilterWrapper>
-      <ProductWrapper>
+      <UserWrapper>
       {
         users && users?.length > 0
         ? 
@@ -213,7 +213,7 @@ const UserList = () => {
         : null
       }
       
-      </ProductWrapper>
+      </UserWrapper>
       <PaginationBarWrapper>
         <PaginationBar currentPage={currentPage} setCurrentPage={setCurrentPage}/>
       </PaginationBarWrapper>
