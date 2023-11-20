@@ -115,7 +115,7 @@ const DisabledButton = styled('button')`
     color: white;
     color: red;
     background-color: white;
-    border: 5px solid red;;
+    border: 2px solid red;;
     border-radius: 5px;
 `
 
