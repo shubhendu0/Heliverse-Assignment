@@ -17,7 +17,7 @@ const Container = styled(Box)`
   ${mobile({  })}
 `;
 
-const ProductWrapper = styled(Box)`
+const Wrapper = styled(Box)`
   width: 100vw;
   height: auto;
   margin: auto;
@@ -66,7 +66,7 @@ const TeamList = () => {
 
   return (
     <Container>
-      <ProductWrapper>
+      <Wrapper>
       {
         teams && teams.length > 0
         ? 
@@ -81,7 +81,7 @@ const TeamList = () => {
             </TeamWrapper>         
         : null
       }
-      </ProductWrapper>
+      </Wrapper>
     </Container>
   )
 }
