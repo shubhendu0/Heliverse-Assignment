@@ -12,7 +12,7 @@ const Container = styled(Box)`
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
-  border-radius: 7px;
+  border-radius: 50%;
   border: 1px solid;
   ${mobile({  })}
 `;
