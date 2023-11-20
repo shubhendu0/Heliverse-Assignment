@@ -17,6 +17,7 @@ const Container = styled(Box)`
   justify-content: center;
   cursor: pointer;
   border-radius: 7px;
+  border: 1px solid ;
   ${mobile({width: "400px", height: "200px" })}
 `;
 
@@ -30,7 +31,7 @@ const Wrapper = styled(Box)`
   flex-direction: row;
   justify-content: center;
   cursor: pointer;
-  border: 1px solid ;
+  
   border-radius: 7px;
   ${mobile({width: "400px", height: "200px" })}
 `;
@@ -83,15 +84,13 @@ const SelectButtonWrapper = styled(Box)`
   display: flex;
   justify-content: center;
   cursor: pointer;
-  border: 1px solid;
   border-radius: 7px;
-  background-color: #2196f3;
   ${mobile({ })}
 `;
 
 const SelectButton = styled('button')`
     width: 400px;
-    height: 47px;
+    height: 49px;
     cursor: pointer;
     color: white;
     background-color: #2196f3;
@@ -101,22 +100,22 @@ const SelectButton = styled('button')`
 
 const UnselectButton = styled('button')`
     width: 400px;
-    height: 47px;
+    height: 49px;
     cursor: pointer;
     color: #2196f3;
     background-color: white;
-    border: none;
+    border: 1px solid #2196f3;
     border-radius: 5px;
 `
 
 const DisabledButton = styled('button')`
-    height: 47px;
+    height: 49px;
     width: 400px;
     cursor: pointer;
     color: white;
     color: red;
     background-color: white;
-    border: none;
+    border: 5px solid red;;
     border-radius: 5px;
 `
 
