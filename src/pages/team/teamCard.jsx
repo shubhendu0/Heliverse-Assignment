@@ -7,7 +7,7 @@ import { getUser } from '../../redux/user/userActions';
 
 const Container = styled(Box)`
   width: 400px;
-  height: 230px;
+  height: 200px;
   margin-bottom: 40px;
   position: relative;
   align-items: center;
@@ -16,6 +16,7 @@ const Container = styled(Box)`
   justify-content: center;
   cursor: pointer;
   border-radius: 7px;
+  box-shadow: 0px 0px 1px 1px #bdbdbd;
   ${mobile({width: "400px", height: "200px" })}
 `;
 
@@ -29,7 +30,6 @@ const Wrapper = styled(Box)`
   flex-direction: row;
   justify-content: center;
   cursor: pointer;
-  border: 1px solid ;
   border-radius: 7px;
   ${mobile({width: "400px", height: "200px" })}
 `;
