@@ -3,8 +3,9 @@ import { styled, Box } from '@mui/material';
 
 
 const Container = styled(Box)`
-  width: 150px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
+  margin: 0;
   position: relative;
   align-items: center;
   display: flex;
@@ -12,12 +13,13 @@ const Container = styled(Box)`
   justify-content: center;
   cursor: pointer;
   border-radius: 7px;
-  ${mobile({ })}
+  border: 1px solid;
+  ${mobile({  })}
 `;
 
 const Wrapper = styled(Box)`
-  width: 150px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   position: relative;
   align-items: center;
   display: flex;
@@ -29,8 +31,8 @@ const Wrapper = styled(Box)`
 `;
 
 const Image = styled('img')`
-  width: 150px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   ${mobile({  })}
 `;
