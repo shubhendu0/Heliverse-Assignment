@@ -12,13 +12,15 @@ const SearchContainer = styled(Box)`
   background-color: white;
   display: flex;
   justify-content: flex-end;
+  border: 1px solid;
+  border-radius: 20px;
   ${mobile({ width:"60%", marginRight: "3px" })}
 `
 
 const InputSearchBase = styled(InputBase)`
-  paddingLeft: 10px;
+  padding-left: 10px;
   width: 100%;
-  color: black;
+  color: black; 
   ${mobile({ fontSize: "16px" })}
 `
 
