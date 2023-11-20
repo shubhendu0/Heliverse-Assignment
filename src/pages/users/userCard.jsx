@@ -111,7 +111,7 @@ const UnselectButton = styled('button')`
 const DisabledButton = styled('button')`
     height: 49px;
     width: 400px;
-    cursor: pointer;
+    cursor: not-allowed;
     color: white;
     color: red;
     background-color: white;
