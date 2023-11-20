@@ -10,7 +10,7 @@ import { useParams } from 'react-router-dom';
 const Container = styled(Box)`
   width: 100vw;
   height: auto;
-  margin: 10px auto;
+  margin: 30px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
