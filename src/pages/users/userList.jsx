@@ -186,7 +186,7 @@ const UserList = () => {
       </FilterWrapper>
       <ProductWrapper>
       {
-        users && users.length > 0
+        users && users?.length > 0
         ? 
           <Grid container spacing={3}>          
             {
@@ -202,7 +202,7 @@ const UserList = () => {
         : null
       }
       {
-            !filterOpen && users.length > 0
+            !filterOpen && users?.length > 0
             ?
                 <FilterButton onClick={() => setFilterOpen(!filterOpen)}> Filter <FilterAlt/> </FilterButton>              
             : null
