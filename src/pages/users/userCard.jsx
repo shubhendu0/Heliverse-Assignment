@@ -17,7 +17,7 @@ const Container = styled(Box)`
   justify-content: center;
   cursor: pointer;
   border-radius: 7px;
-  border: 1px solid ;
+  box-shadow: 0px 0px 1px 1px #bdbdbd;
   ${mobile({width: "400px", height: "200px" })}
 `;
 
@@ -31,7 +31,6 @@ const Wrapper = styled(Box)`
   flex-direction: row;
   justify-content: center;
   cursor: pointer;
-  
   border-radius: 7px;
   ${mobile({width: "400px", height: "200px" })}
 `;
