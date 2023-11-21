@@ -18,7 +18,7 @@ const Container = styled(Box)`
   cursor: pointer;
   border-radius: 7px;
   box-shadow: 0px 0px 1px 1px #bdbdbd;
-  ${mobile({width: "95vw", height: "200px" })}
+  ${mobile({width: "95vw", height: "229px" })}
 `;
 
 const Wrapper = styled(Box)`
@@ -43,16 +43,18 @@ const Image = styled('img')`
 `;
 
 const Info = styled(Box)`
-  width: 270px;
+  width: 260px;
   height: 180px;
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: center;
   padding : 0px 8px;
+  ${mobile({width: "200px" })}
 `;
 
 const Typography = styled('p')`
+    width: 270px;
     margin: 5px 0px;
     font-size: 14px;
     font-weight: 540;
@@ -61,7 +63,7 @@ const Typography = styled('p')`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    ${mobile({ fontSize: "14px" })}
+    ${mobile({ fontSize: "12px" })}
 `;
 
 const ButtonWrapper = styled(Box)`
@@ -116,7 +118,7 @@ const DisabledButton = styled('button')`
     color: white;
     color: red;
     background-color: white;
-    border: 2px solid red;;
+    border: 3px solid red;;
     border-radius: 5px;
     ${mobile({width: "95vw" })}
 `
