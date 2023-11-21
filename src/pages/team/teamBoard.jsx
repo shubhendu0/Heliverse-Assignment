@@ -1,43 +1,43 @@
 import { mobile } from "../../responsive";
-import { styled, Box, Grid } from '@mui/material';
+import { styled, Box } from '@mui/material';
 import { useNavigate } from "react-router-dom";
 import TeamAvatar from "./teamAvatar";
 
 
 const Container = styled(Box)`
-  width: 95vw;
+  width: 600px;
   margin: 20px 0px;
   position: relative;
   align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
   border-radius: 7px;
   box-shadow: 0px 0px 2px 2px #bdbdbd;
-  ${mobile({width: "95vw" })}
+  ${mobile({width: "95vw", flexDirection:"column" })}
 `;
 
 const Info = styled(Box)`
-    width: 25vw;
+    width: 100%;
+    height: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 `
 
-const Heading = styled('h4')`
-    font-weight: 500;
+const Heading = styled('p')`
+    font-size: 22px;
+    font-weight: 700;
+    color: #bdbdbd;
     letter-spacing: 1px;
-    text-align: center;
-`
-
-const Typography = styled('p')`
-    font-size: 16px;
+    text-shadow: 0px 0px 2px #bdbdbd;
     text-align: center;
 `
 
 const Wrapper = styled(Box)`
-  width: 70vw;
+  width: auto;
+  min-height: 100px;
   position: relative;
   margin-bottom: 1px;
   align-items: center;
@@ -46,7 +46,7 @@ const Wrapper = styled(Box)`
   justify-content: center;
   cursor: pointer;
   border-radius: 7px;
-  ${mobile({width: "70vw", height: "200px" })}
+  ${mobile({width: "95vw", height: "auto" })}
 `;
 
 const TeamBoard = ({ item, index }) => {
@@ -64,22 +64,16 @@ const TeamBoard = ({ item, index }) => {
           <Container onClick={() => handleClick(item)}>
             <Info>
                 <Heading> {`Team No. - ${index+1}`}</Heading>
-                <Typography> {`Total Members - ${item?.team_members.length}`}</Typography>
-            </Info>
-            
-            <Wrapper onClick={handleClick}>
+            </Info>            
             {
-                <Grid container spacing={0}>  
+              <Wrapper onClick={handleClick}>  
                 {
-                    item?.team_members.map((item, index) => (
-                    <Grid item xs={4} sm={3} md={2} lg={2} xl={1} key={item._id}> 
-                        <TeamAvatar key={item._id} item={item} index={index}/>  
-                    </Grid>               
-                ))
+                    item?.team_members.map((item, index) => ( 
+                        <TeamAvatar key={item._id} item={item} index={index}/>                              
+                    ))
                 }
-                </Grid>
-            }  
-            </Wrapper>       
+                </Wrapper> 
+            }              
           </Container>
         )
         :
