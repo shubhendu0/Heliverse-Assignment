@@ -17,7 +17,7 @@ const Container = styled(Box)`
   cursor: pointer;
   border-radius: 7px;
   box-shadow: 0px 0px 1px 1px #bdbdbd;
-  ${mobile({width: "400px", height: "200px" })}
+  ${mobile({width: "95vw", height: "200px" })}
 `;
 
 const Wrapper = styled(Box)`
@@ -31,7 +31,7 @@ const Wrapper = styled(Box)`
   justify-content: center;
   cursor: pointer;
   border-radius: 7px;
-  ${mobile({width: "400px", height: "200px" })}
+  ${mobile({width: "95vw", height: "200px" })}
 `;
 
 const Image = styled('img')`
@@ -74,7 +74,6 @@ const TeamCard = ({ item }) => {
   }
 
   return (
-
     <>
       { 
         item ?
