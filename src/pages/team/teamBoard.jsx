@@ -29,20 +29,21 @@ const Info = styled(Box)`
 const Heading = styled('p')`
     font-size: 22px;
     font-weight: 700;
-    color: #bdbdbd;
+    color: white;
     letter-spacing: 1px;
-    text-shadow: 0px 0px 2px #bdbdbd;
+    text-shadow: 1px 1px 2px #90a4ae;
     text-align: center;
 `
 
 const Wrapper = styled(Box)`
-  width: auto;
+  width: 100%;
   min-height: 100px;
   position: relative;
   margin-bottom: 1px;
   align-items: center;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   cursor: pointer;
   border-radius: 7px;
@@ -69,8 +70,8 @@ const TeamBoard = ({ item, index }) => {
               <Wrapper onClick={handleClick}>  
                 {
                     item?.team_members.map((item, index) => ( 
-                        <TeamAvatar key={item._id} item={item} index={index}/>                              
-                    ))
+                        <TeamAvatar key={item._id} item={item} index={index}/>                                  
+                ))
                 }
                 </Wrapper> 
             }              
