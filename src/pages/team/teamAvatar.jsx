@@ -1,42 +1,34 @@
 import { mobile } from "../../responsive";
 import { styled, Box } from '@mui/material';
 
-
 const Container = styled(Box)`
-  width: 100px;
-  height: 100px;
-  margin: 0;
-  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
   border-radius: 50%;
-  border: 1px solid;
-  ${mobile({  })}
+  box-shadow: 0px 0px 2px 2px #bdbdbd;
+  ${mobile({width:"60px", height:"60px"  })}
 `;
 
 const Wrapper = styled(Box)`
-  width: 100px;
-  height: 100px;
-  position: relative;
   align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  cursor: pointer;
-  border-radius: 7px;
   ${mobile({ })}
 `;
 
 const Image = styled('img')`
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
-  ${mobile({  })}
+  ${mobile({ width:"50px", height:"50px"  })}
 `;
-
 
 const TeamAvatar = ({ item }) => {
   return (
