@@ -37,7 +37,7 @@ const PaginationBarWrapper = styled(Box)`
   margin: 40px auto;
   align-items: center;
   justify-content: center;
-  ${mobile({ })}
+  ${mobile({ width:"99vw" })}
 `;
 
 const ProductWrapper = styled(Box)`
