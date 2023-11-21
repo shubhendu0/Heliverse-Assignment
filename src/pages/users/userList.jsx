@@ -9,12 +9,13 @@ import SearchBar from '../../components/searchbar';
 import PaginationBar from '../../components/paginationbar';
 import FilterBar from '../../components/filter';
 import { createTeam } from '../../redux/team/teamActions';
+import { useNavigate } from 'react-router-dom';
 
 
 const Container = styled(Box)`
   width: 100vw;
   height: auto;
-  margin: 10px auto;
+  margin: 10px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,28 +24,26 @@ const Container = styled(Box)`
 `;
 
 const SearchBarWrapper = styled(Box)`
-  width: 100%;
+  width: 95%;
   display: flex;
-  margin: 30px auto;
+  margin: 30px 0px;
   align-items: center;
   justify-content: center;
   ${mobile({ })}
 `;
 
 const PaginationBarWrapper = styled(Box)`
-  width: 100%;
   display: flex;
-  margin: 40px auto;
+  margin: 40px 0px;
   align-items: center;
   justify-content: center;
   ${mobile({ width:"99vw" })}
 `;
 
-const ProductWrapper = styled(Box)`
-  width: 100vw;
+const ListWrapper = styled(Box)`
+  width: 95vw;
   height: auto;
-  margin: auto;
-  padding: auto;
+  margin: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -143,6 +142,7 @@ const CreateTeamButton = styled(AppBar)`
 
 const UserList = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const usersArr = useSelector(state => state.user.users)
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
@@ -187,21 +187,21 @@ const UserList = () => {
           : null
         }
       </FilterWrapper>
-      <ProductWrapper>
+      <ListWrapper>
       {
         users && users.length > 0
         ? 
-          <Grid container spacing={3}>          
+          <Grid container spacing={1}>          
             {
               users?.map((item) => (
-                <Grid item xs={12} sm={12} md={6} lg={4} xl={1} key={item._id}> 
+                <Grid item xs={12} sm={12} md={6} lg={4} xl={2} key={item._id}> 
                   <CardWrapper key={item._id}>
                     <UserCard key={item._id} item={item} selectedUsers={selectedUsers} setSelectedUsers={setSelectedUsers} selectedDomains={selectedDomains} setSelectedDomains={setSelectedDomains}/>
                   </CardWrapper>
                 </Grid> 
               ))
             }           
-          </Grid> 
+          </Grid>
         : null
       }
       {
@@ -216,7 +216,7 @@ const UserList = () => {
         : null
       }
       
-      </ProductWrapper>
+      </ListWrapper>
       <PaginationBarWrapper>
         <PaginationBar currentPage={currentPage} setCurrentPage={setCurrentPage}/>
       </PaginationBarWrapper>
