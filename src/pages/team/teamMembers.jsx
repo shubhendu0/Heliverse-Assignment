@@ -30,7 +30,6 @@ const Wrapper = styled(Box)`
   ${mobile({ })}
 `;
 
-
 const CardWrapper = styled(Box)`
   width: auto;
   height: auto;
@@ -40,7 +39,6 @@ const CardWrapper = styled(Box)`
   padding: auto;
   ${mobile({ })}
 `;
-
 
 const TeamMember = () => {
   const dispatch = useDispatch();
@@ -55,7 +53,6 @@ const TeamMember = () => {
   useEffect(() =>{
     setMembers(memberArr)
   },[memberArr])
-
 
   return (
     <Container>
