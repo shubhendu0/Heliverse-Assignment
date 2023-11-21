@@ -40,7 +40,7 @@ const PaginationBarWrapper = styled(Box)`
   ${mobile({ })}
 `;
 
-const UserWrapper = styled(Box)`
+const ProductWrapper = styled(Box)`
   width: 100vw;
   height: auto;
   margin: auto;
@@ -52,12 +52,12 @@ const UserWrapper = styled(Box)`
   ${mobile({ })}
 `;
 
-const FilterWrapper = styled(AppBar)`
+const FilterWrapper = styled(Box)`
   display: flex;
   width: 30vw;
-  position: sticky;
-  left: 0px;
-  top: 70px;
+  position: fixed;
+  left: 34%;
+  top: 140px;
   height: 50vh;
   min-height: 350px;
   margin: 20px;
@@ -66,7 +66,7 @@ const FilterWrapper = styled(AppBar)`
   background-color: #2196f3;
   z-index: 2;
   transition: 0.5 all;
-  ${mobile({ display: "none", position:"fixed", top: "100px", left:"15vw", width: "70vw", height: "350px"})}
+  ${mobile({ display: "none", position:"fixed", margin: "0px", top: "100px", left:"0%", width: "99vw", height: "250px"})}
 `;
 
 const CloseFilter = styled(Cancel)`
@@ -184,9 +184,9 @@ const UserList = () => {
           : null
         }
       </FilterWrapper>
-      <UserWrapper>
+      <ProductWrapper>
       {
-        users && users?.length > 0
+        users && users.length > 0
         ? 
           <Grid container spacing={3}>          
             {
@@ -202,7 +202,7 @@ const UserList = () => {
         : null
       }
       {
-            !filterOpen && users?.length > 0
+            !filterOpen && users.length > 0
             ?
                 <FilterButton onClick={() => setFilterOpen(!filterOpen)}> Filter <FilterAlt/> </FilterButton>              
             : null
@@ -213,7 +213,7 @@ const UserList = () => {
         : null
       }
       
-      </UserWrapper>
+      </ProductWrapper>
       <PaginationBarWrapper>
         <PaginationBar currentPage={currentPage} setCurrentPage={setCurrentPage}/>
       </PaginationBarWrapper>
