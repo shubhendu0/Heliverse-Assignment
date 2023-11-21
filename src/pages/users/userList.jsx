@@ -169,6 +169,9 @@ const UserList = () => {
 
   const handleCreateTeam = () =>{
     dispatch(createTeam(selectedUsers));
+    setSelectedUsers([]);
+    setSelectedDomains([]);
+    navigate("/teams");
   }
 
   return (
