@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { mobile } from "../responsive";
-import { styled, Box, Slider, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
-import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-//import Select from 'react-select';
+import { styled, Box, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+import { useSelector } from "react-redux";
+
 
 const Container = styled(Box)`
     width: 95%;
@@ -13,17 +12,6 @@ const Container = styled(Box)`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-`
-
-const Wrapper = styled(Box)`
-    width: 100%;
-    margin: 5px 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-    ${mobile({ width: "90%", })}
 `
 
 const FilterWrapper = styled(Box)`
@@ -43,17 +31,6 @@ const SelectHeading = styled('p')`
     letter-spacing: 2px;
     margin-left: 10px;
     color: white;
-`
-
-const SelectOptions = styled(Select)`
-    width: 60%;
-    padding: 0;
-    font-size: 12px;
-`
-const PriceSlider = styled(Slider)`
-    width: 52%;
-    color: #2196f3;
-    margin-right: 10px;
 `
 
 const ButtonWrapper = styled(Box)`
@@ -83,13 +60,10 @@ const ApplyButton = styled('button')`
 `
 
 const FilterBar = ({ domain, setDomain, gender, setGender, availability, setAvailability }) => {
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
     const list = useSelector(state => state.user.domainList)
     const [domainList, setDomainList] = useState([]);
     const genderList = [ "Male", "Female"];
     const availabilityList = [ "true", "false"];
-
 
     useEffect(() => {
         setDomainList(list)
