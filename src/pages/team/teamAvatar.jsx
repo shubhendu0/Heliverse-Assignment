@@ -12,7 +12,7 @@ const Container = styled(Box)`
   cursor: pointer;
   border-radius: 50%;
   box-shadow: 0px 0px 2px 2px #bdbdbd;
-  ${mobile({width:"60px", height:"60px"  })}
+  ${mobile({width:"50px", height:"50px"  })}
 `;
 
 const Wrapper = styled(Box)`
@@ -27,7 +27,7 @@ const Image = styled('img')`
   width: 50px;
   height: 50px;
   object-fit: cover;
-  ${mobile({ width:"50px", height:"50px"  })}
+  ${mobile({ width:"35px", height:"35px"  })}
 `;
 
 const TeamAvatar = ({ item }) => {
