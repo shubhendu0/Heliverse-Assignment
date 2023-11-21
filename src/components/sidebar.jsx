@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { mobile } from "../responsive";
 import { 
     styled,
@@ -12,8 +12,7 @@ import {
     ListItemButton,
     Divider,
     ListItemIcon,
-    ListItemText,
-    Badge
+    ListItemText
 } from '@mui/material';
 import { 
     MenuOpen,
@@ -24,7 +23,6 @@ import {
     Groups
 } from "@mui/icons-material";
 import { setMode } from '../redux/theme/themeSlice';
-
 
 
 const Container = styled(Box)`
@@ -57,8 +55,13 @@ const Sidebar = ({isDrawerOpen, setIsDrawerOpen}) => {
         setIsDrawerOpen(false);
     }
 
-    const navigateProfile = () => {
-        navigate("/profile");
+    const navigateCreateUser= () => {
+        navigate("/createUser");
+        setIsDrawerOpen(false);     
+    }
+
+    const navigateTeamList= () => {
+        navigate("/teams");
         setIsDrawerOpen(false);     
     }
 
@@ -95,7 +98,7 @@ const Sidebar = ({isDrawerOpen, setIsDrawerOpen}) => {
                                 </ListItemButton>
                             </ListItem>
                             <ListItem disablePadding>
-                                <ListItemButton onClick={() => navigate("/createUser")}>
+                                <ListItemButton onClick={navigateCreateUser}>
                                     <ListItemIcon>
                                         <Create style={{ fontSize: 24 }}/>
                                     </ListItemIcon>                             
@@ -103,7 +106,7 @@ const Sidebar = ({isDrawerOpen, setIsDrawerOpen}) => {
                                 </ListItemButton>
                             </ListItem>
                             <ListItem disablePadding>
-                                <ListItemButton onClick={() => navigate("/teams")}>
+                                <ListItemButton onClick={navigateTeamList}>
                                     <ListItemIcon>
                                         <Groups style={{ fontSize: 24 }}/>
                                     </ListItemIcon>                             
