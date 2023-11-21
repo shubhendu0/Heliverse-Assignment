@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getTeams } from '../../redux/team/teamActions';
 import TeamBoard from './teamBoard';
 
-
 const Container = styled(Box)`
   width: 100vw;
   height: auto;
@@ -17,7 +16,7 @@ const Container = styled(Box)`
   ${mobile({  })}
 `;
 
-const Wrapper = styled(Box)`
+const ProductWrapper = styled(Box)`
   width: 100vw;
   height: auto;
   margin: auto;
@@ -35,10 +34,11 @@ const TeamWrapper = styled(Box)`
   margin: auto;
   padding: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  ${mobile({ })}
+  ${mobile({ flexDirection: "column"})}
 `;
 
 const CardWrapper = styled(Box)`
@@ -66,7 +66,7 @@ const TeamList = () => {
 
   return (
     <Container>
-      <Wrapper>
+      <ProductWrapper>
       {
         teams && teams.length > 0
         ? 
@@ -81,7 +81,7 @@ const TeamList = () => {
             </TeamWrapper>         
         : null
       }
-      </Wrapper>
+      </ProductWrapper>
     </Container>
   )
 }
